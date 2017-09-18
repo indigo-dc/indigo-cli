@@ -21,6 +21,7 @@
         - heat-translator
         - oneclient
         - orchent
+        - python2-keystoneauth-oidc-authz-code
         - python2-python-opie-cli
         - tosca-parser
         - wattson
