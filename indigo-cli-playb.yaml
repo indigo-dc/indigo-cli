@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  tasks:
+    - include_role:
+        name: ansible-role-indigo-repo
+      vars:
+        indigo_release: 2
+        enable_openstack_distro_repo: true
+        openstack_release: newton
+    - name: "Install Openstack client {{ openstack_release }}"
+      yum: name={{ item }} state=latest
+      with_items:
+        - indigodc-release
+        - python-openstackclient
+        - python2-heatclient
+      vars:
+        openstack_release: newton
+    - name: "Install Indigo {{ indigo_release }} packages"
+      yum: name={{ item }} state=latest
+      with_items:
+        - heat-translator
+        - oneclient
+        - orchent
+        - python2-python-opie-cli
+        - tosca-parser
+        - wattson
+      vars:
+        indigo_release: 2
+
