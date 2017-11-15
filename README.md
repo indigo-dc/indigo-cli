@@ -13,12 +13,10 @@ The clients available in this docker are:
 
 * Wattson
 * Orchent
-* Oneclient
-* Openstack Newton clients plus the following from Indigo:
+* Openstack clients plus the following from Indigo:
  * heat-translator
  * tosca-parser
  * python2-keystoneauth-oidc-authz-code
- * python2-python-opie-cli
 
 Build docker image
 ------------------
